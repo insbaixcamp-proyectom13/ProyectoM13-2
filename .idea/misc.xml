@@ -4,8 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/juanjose/Desktop/DAM/M13/Projecte2/ShowsTGN/app/src/main/res/layout/content_main.xml" value="0.2269021739130435" />
+        <entry key="..\:/Users/juanjose/Desktop/ShowsTarragona/app/src/main/res/drawable-v24/ic_wave.xml" value="0.262" />
+        <entry key="..\:/Users/juanjose/Desktop/ShowsTarragona/app/src/main/res/drawable/date.xml" value="0.267" />
+        <entry key="..\:/Users/juanjose/Desktop/ShowsTarragona/app/src/main/res/drawable/gradient.xml" value="0.267" />
+        <entry key="..\:/Users/juanjose/Desktop/ShowsTarragona/app/src/main/res/layout/fragment_detalls_event.xml" value="0.2609375" />
         <entry key="..\:/Users/juanjose/Desktop/ShowsTarragona/app/src/main/res/layout/fragment_home.xml" value="0.26197916666666665" />
         <entry key="..\:/Users/juanjose/Desktop/ShowsTarragona/app/src/main/res/layout/fragment_inici.xml" value="0.23641304347826086" />
+        <entry key="..\:/Users/juanjose/Desktop/ShowsTarragona/app/src/main/res/layout/fragment_inici_sesio.xml" value="0.25677083333333334" />
+        <entry key="..\:/Users/juanjose/Desktop/ShowsTarragona/app/src/main/res/layout/fragment_registre.xml" value="0.25677083333333334" />
         <entry key="..\:/Users/juanjose/Desktop/ShowsTarragona/app/src/main/res/layout/fragment_slideshow.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/juanjose/Desktop/ShowsTarragona/app/src/main/res/layout/item_view.xml" value="0.26197916666666665" />
         <entry key="..\:/Users/juanjose/Desktop/ShowsTarragona/app/src/main/res/layout/nav_header_main.xml" value="0.36666666666666664" />
