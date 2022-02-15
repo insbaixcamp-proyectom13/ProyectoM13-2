@@ -21,7 +21,7 @@ public class HomeViewModel extends ViewModel {
         fbc.getEvents(new FirebaseConnection.FireStoreResults() {
             @Override
             public void onResultGet() {
-                mText.setValue(fbc.getList());
+                mText.setValue(fbc.getListEvents());
             }
         });
     }
