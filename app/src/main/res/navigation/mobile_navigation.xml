@@ -9,7 +9,7 @@
         android:id="@+id/nav_home"
         android:name="org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.showstgn.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_inici" />
 
     <fragment
         android:id="@+id/nav_gallery"

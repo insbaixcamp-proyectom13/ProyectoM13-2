@@ -4,16 +4,29 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.showstgn.data.FirebaseConnection;
+import org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.showstgn.pojo.Event;
+
+import java.util.ArrayList;
+
 public class HomeViewModel extends ViewModel {
 
-    private final MutableLiveData<String> mText;
+    private MutableLiveData<ArrayList<Event>> mText;
+    private FirebaseConnection fbc;
 
     public HomeViewModel() {
+
+        fbc = new FirebaseConnection();
         mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+        fbc.getEvents(new FirebaseConnection.FireStoreResults() {
+            @Override
+            public void onResultGet() {
+                mText.setValue(fbc.getList());
+            }
+        });
     }
 
-    public LiveData<String> getText() {
+    public LiveData<ArrayList<Event>> getEventList() {
         return mText;
     }
 }

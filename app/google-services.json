@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1071412793567",
+    "project_id": "showstarragona",
+    "storage_bucket": "showstarragona.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1071412793567:android:3cc1bf045d243c56ddd96a",
+        "android_client_info": {
+          "package_name": "org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.showstgn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1071412793567-5pv2u9mnu7h35k67ljh2eiuf4ib2s7f7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDb1um1-ocg4rSIsMzUXY02EeWJ7G16ErA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1071412793567-5pv2u9mnu7h35k67ljh2eiuf4ib2s7f7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
