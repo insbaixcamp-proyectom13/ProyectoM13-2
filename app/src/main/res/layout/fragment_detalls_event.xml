@@ -172,7 +172,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:fontFamily="@font/wght"
-                android:text="TextView"
+                android:text="Activitat de l’Associació de Relacions Culturals Catalunya Israel (ARCCI). Presentació del llibre Sort-Tel-Aviv. Dues bessones separades pel nazisme, de Josep Calvet. Amagada entre la documentació que guardaven els propietaris d’un antic hostal de Sort, l’any 2017 es descobreix una carta escrita el 1944 per una jove jueva que havia fugit del nazisme a través del Pirineu de Lleida. Aquesta carta, adreçada a la seva bessona resident a Tel-Aviv, va fer un llarg viatge d’anada, va ser retornada i va romandre oblidada durant set dècades. Aquest llibre narra com l’autor aconsegueix localitzar la destinatària mitjançant una recerca que li permet reconstruir la vida de les dues germanes separades pels nazis l’any 1939. "
                 android:textColor="@color/Dark_blue" />
 
             <Button
@@ -241,6 +241,12 @@
                     android:text="17:00"
                     android:textColor="@color/Dark_blue" />
             </LinearLayout>
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/mapView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/action_settings" />
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
