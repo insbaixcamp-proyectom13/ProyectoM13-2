@@ -33,7 +33,7 @@ public class EventViewModel extends ViewModel {
     public void loadOpinions() {
         fb.getEventOpinions(mEvent.getValue().getId(), new FirebaseConnection.FireStoreResults() {
             @Override
-            public void onResultGet() {
+            public void onResultGet(ArrayList list) {
                 mOpinions.setValue(fb.getListOpinions());
             }
         });

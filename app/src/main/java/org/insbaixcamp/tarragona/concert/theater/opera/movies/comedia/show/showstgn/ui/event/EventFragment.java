@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,7 +16,11 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+
 import org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.showstgn.adapters.OpinioAdapter;
+import org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.showstgn.data.FirebaseConnection;
 import org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.showstgn.databinding.FragmentDetallsEventBinding;
 import org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.showstgn.pojo.Event;
 import org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.showstgn.pojo.Opinio;
@@ -30,6 +35,8 @@ public class EventFragment extends Fragment {
     private View root;
     private OpinioAdapter adapter;
     private LinearLayoutManager layoutManager;
+    private FirebaseConnection fb;
+    private Event selectedEvent;
 
     @Nullable
     @Override
@@ -40,7 +47,7 @@ public class EventFragment extends Fragment {
         root = binding.getRoot();
         layoutManager = new LinearLayoutManager(root.getContext(), LinearLayoutManager.VERTICAL, false);
         binding.incOpinions.recyclerView2.setLayoutManager(layoutManager);
-
+        fb = new FirebaseConnection();
 
         TextView tvTitle = binding.textView2;
         TextView tvDescripcio = binding.tvDescripcio;
@@ -52,7 +59,7 @@ public class EventFragment extends Fragment {
 
         if (getArguments() != null) {
             eventViewModel.setEvent((Event) getArguments().getSerializable("event"));
-            Event selectedEvent = (Event) getArguments().getSerializable("event");
+            selectedEvent = (Event) getArguments().getSerializable("event");
             tvTitle.setText(selectedEvent.getNom());
             tvAforament.setText(String.valueOf(selectedEvent.getAforament()));
             tvDescripcio.setText(selectedEvent.getDescripcio());
@@ -69,6 +76,34 @@ public class EventFragment extends Fragment {
                         binding.incOpinions.recyclerView2.setVisibility(View.VISIBLE);
                         adapter = new OpinioAdapter(opinios);
                         binding.incOpinions.recyclerView2.setAdapter(adapter);
+                    }
+                }
+            });
+
+            ImageView ivOpina = binding.incOpinions.ivOpina;
+            EditText etOpinio = binding.incOpinions.etOpinio;
+
+            ivOpina.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    String opinio = etOpinio.getText().toString().trim();
+                    int puntuacion = 5;
+                    String usuari = "JdeDyVWJ2uQEKAHBWxCKTMVXwJp2";
+                    String nomUsuari = "JuanJose";
+
+
+                    if (!opinio.isEmpty() && opinio != "") {
+                        etOpinio.setText(null);
+                        fb.writeOpinion(opinio, selectedEvent.getId(), usuari, nomUsuari, puntuacion, new OnCompleteListener() {
+                            @Override
+                            public void onComplete(@NonNull Task task) {
+                                eventViewModel.loadOpinions();
+                                adapter.notifyDataSetChanged();
+                                binding.incOpinions.cvEmpty.setVisibility(View.GONE);
+                                binding.incOpinions.recyclerView2.setVisibility(View.VISIBLE);
+                            }
+                        });
+
                     }
                 }
             });

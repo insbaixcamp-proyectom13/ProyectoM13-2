@@ -15,6 +15,7 @@ import org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.shows
 import org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.showstgn.pojo.Opinio;
 import org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.showstgn.pojo.Reserva;
 import org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.showstgn.pojo.Usuari;
+import org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.showstgn.ui.event.EventViewModel;
 
 import java.util.ArrayList;
 
@@ -26,6 +27,7 @@ public class FirebaseConnection {
     String jsonValues;
     ArrayList listEvents;
     ArrayList listOpinions;
+    ArrayList listOpinionsAll;
     ArrayList listReserves;
     Usuari dadesUsuari;
     FireStoreResults fireStoreResults;
@@ -46,6 +48,10 @@ public class FirebaseConnection {
         return listOpinions;
     }
 
+    public ArrayList getListOpinionsAll() {
+        return listOpinionsAll;
+    }
+
     public FirebaseConnection () {
         db = FirebaseDatabase.getInstance("https://showstarragona-default-rtdb.europe-west1.firebasedatabase.app/");
         gson = new Gson();
@@ -54,6 +60,7 @@ public class FirebaseConnection {
         listOpinions = new ArrayList<>();
         listReserves = new ArrayList<>();
         dadesUsuari = new Usuari();
+        listOpinionsAll = new ArrayList();
     }
 
     public void getEventOpinions(int idEvent, final FireStoreResults results) {
@@ -73,7 +80,7 @@ public class FirebaseConnection {
 
                 listOpinions = new ArrayList(filteredOpinions);
 
-                results.onResultGet();
+                results.onResultGet(filteredOpinions);
             }
         });
 
@@ -90,7 +97,9 @@ public class FirebaseConnection {
 
                 user = gson.fromJson(string, Usuari.class);
                 dadesUsuari = user;
-                resul.onResultGet();
+                ArrayList<Usuari> users = new ArrayList<>();
+                users.add(user);
+                resul.onResultGet(users);
             }
         });
 
@@ -106,7 +115,7 @@ public class FirebaseConnection {
                 ArrayList<Opinio> opinions = gson.fromJson(string, new TypeToken<ArrayList<Opinio>>(){}.getType());
                 listOpinions = opinions;
 
-                resul.onResultGet();
+                resul.onResultGet(opinions);
             }
         });
 
@@ -129,7 +138,7 @@ public class FirebaseConnection {
 
                 listReserves = new ArrayList(filteresReserves);
 
-                resul.onResultGet();
+                resul.onResultGet(filteresReserves);
             }
         });
 
@@ -145,7 +154,7 @@ public class FirebaseConnection {
                 ArrayList<Reserva> reserves = gson.fromJson(string, new TypeToken<ArrayList<Reserva>>(){}.getType());
                 listReserves = reserves;
 
-                resul.onResultGet();
+                resul.onResultGet(reserves);
             }
         });
 
@@ -162,14 +171,25 @@ public class FirebaseConnection {
                 ArrayList<Event> events = gson.fromJson(string, new TypeToken<ArrayList<Event>>(){}.getType());
                 listEvents = events;
 
-                resul.onResultGet();
+                resul.onResultGet(events);
+            }
+        });
+
+    }
+
+    public void writeOpinion(String opinio, int id, String usuari, String nomUsuari, int puntuacion, final OnCompleteListener listener) {
+        Opinio opinion = new Opinio(opinio, id, usuari, nomUsuari, puntuacion);
+        getOpinions(new FireStoreResults() {
+            @Override
+            public void onResultGet(ArrayList list) {
+                myRef.child("opinions").child(String.valueOf(list.size())).setValue(opinion);
             }
         });
 
     }
 
     public interface FireStoreResults {
-        public void onResultGet();
+        public void onResultGet(ArrayList list);
     }
 
 }

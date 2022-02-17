@@ -20,7 +20,7 @@ public class HomeViewModel extends ViewModel {
         mText = new MutableLiveData<>();
         fbc.getEvents(new FirebaseConnection.FireStoreResults() {
             @Override
-            public void onResultGet() {
+            public void onResultGet(ArrayList list) {
                 mText.setValue(fbc.getListEvents());
             }
         });
