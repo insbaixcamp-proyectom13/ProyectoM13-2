@@ -29,7 +29,7 @@ import org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.shows
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> {
+public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> implements View.OnClickListener {
 
     protected ArrayList<Event> events;
     private View root;
@@ -37,13 +37,15 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
     public EventAdapter( ArrayList<Event> events) {
         this.events = events;
     }
-
-    //Hola
+    private View.OnClickListener listener;
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         this.root = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_view, parent, false);
+
+        root.setOnClickListener(this);
+
         return new ViewHolder(this.root);
     }
 
@@ -75,6 +77,13 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
     @Override
     public int getItemCount() {
         return events.size();
+    }
+
+    @Override
+    public void onClick(View view) {
+        if(listener!=null){
+            listener.onClick(view);
+        }
     }
 
 
