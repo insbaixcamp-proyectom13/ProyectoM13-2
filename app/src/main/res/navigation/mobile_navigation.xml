@@ -18,9 +18,9 @@
         tools:layout="@layout/fragment_registre" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_iniciar_sessio"
         android:name="org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.showstgn.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:label="@string/menu_carrito"
         tools:layout="@layout/fragment_inici_sesio" />
     <fragment
         android:id="@+id/nav_event"
