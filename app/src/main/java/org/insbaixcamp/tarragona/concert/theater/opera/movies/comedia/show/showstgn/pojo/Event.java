@@ -50,6 +50,14 @@ public class Event implements Serializable {
     public void setHora(String hora) {
         this.hora = hora; }
     String hora;
+    @JsonProperty("id")
+    public int getId() {
+        return this.id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    int id;
     @JsonProperty("imatge")
     public String getImatge() {
         return this.imatge; }

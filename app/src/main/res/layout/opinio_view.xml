@@ -24,17 +24,17 @@
             android:layout_height="wrap_content">
 
             <com.mikhaellopez.circularimageview.CircularImageView
-                android:id="@+id/circularImageView"
+                android:id="@+id/ivUserComment"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:src="@tools:sample/avatars" />
+                tools:src="@drawable/teatro" />
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/tvUsernameComment"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -44,19 +44,19 @@
                 android:textAlignment="textEnd"
                 android:textColor="@color/Dark_blue"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/circularImageView"
-                app:layout_constraintEnd_toStartOf="@+id/circularImageView"
+                app:layout_constraintBottom_toBottomOf="@+id/ivUserComment"
+                app:layout_constraintEnd_toStartOf="@+id/ivUserComment"
                 app:layout_constraintStart_toEndOf="@+id/imageView9"
-                app:layout_constraintTop_toTopOf="@+id/circularImageView" />
+                app:layout_constraintTop_toTopOf="@+id/ivUserComment" />
 
             <ImageView
                 android:id="@+id/imageView5"
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:layout_marginStart="16dp"
-                app:layout_constraintBottom_toBottomOf="@+id/textView9"
+                app:layout_constraintBottom_toBottomOf="@+id/tvUsernameComment"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/circularImageView"
+                app:layout_constraintTop_toTopOf="@+id/ivUserComment"
                 app:srcCompat="@android:drawable/btn_star_big_on" />
 
             <ImageView
@@ -105,7 +105,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+                app:layout_constraintTop_toBottomOf="@+id/tvUsernameComment" />
 
             <View
                 android:id="@+id/view8"
@@ -119,7 +119,7 @@
                 app:layout_constraintTop_toTopOf="@+id/view7" />
 
             <TextView
-                android:id="@+id/textView17"
+                android:id="@+id/tvOpinio"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -127,14 +127,14 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="8dp"
                 android:maxLines="8"
-                app:layout_constraintBottom_toTopOf="@+id/textView18"
+                app:layout_constraintBottom_toTopOf="@+id/tvDataComment"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/view8"
                 tools:text="@tools:sample/lorem/random" />
 
             <TextView
-                android:id="@+id/textView18"
+                android:id="@+id/tvDataComment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
@@ -142,58 +142,6 @@
                 android:text="02/12/2021"
                 app:layout_constraintBottom_toBottomOf="@+id/view7"
                 app:layout_constraintEnd_toEndOf="parent" />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="16dp"
-                android:background="@color/Dark_blue"
-                android:visibility="gone"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView9">
-
-                <View
-                    android:id="@+id/view5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:background="@color/baby_blue"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textView15"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="8dp"
-                    android:fontFamily="@font/wght"
-                    android:padding="4dp"
-                    android:text="Descripcio opinio"
-                    android:textColor="@color/Dark_blue"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textView16"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="16dp"
-                    android:fontFamily="@font/wght"
-                    android:paddingStart="8dp"
-                    android:text="02/12/2021"
-                    android:textColor="@color/Dark_blue"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView15" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
