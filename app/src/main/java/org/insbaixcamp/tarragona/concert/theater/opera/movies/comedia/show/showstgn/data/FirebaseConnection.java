@@ -53,6 +53,7 @@ public class FirebaseConnection {
         listEvents = new ArrayList<>();
         listOpinions = new ArrayList<>();
         listReserves = new ArrayList<>();
+        dadesUsuari = new Usuari();
     }
 
     public void getEventOpinions(int idEvent, final FireStoreResults results) {

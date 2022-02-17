@@ -3,6 +3,8 @@ package org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.show
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,14 +15,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 
 import org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.showstgn.R;
+import org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.showstgn.data.FirebaseConnection;
 import org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.showstgn.pojo.Event;
 import org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.showstgn.utilities.PicassoTrustAll;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> {
@@ -48,6 +54,16 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
         holder.tvData.setText(events.get(position).getData());
 
         PicassoTrustAll.getInstance().load(events.get(position).getImatge()).into(holder.ivImatge);
+        holder.ivImatge.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavController nav = Navigation.findNavController(root);
+                Bundle bundle = new Bundle();
+                Log.i("position", events.get(position).getNom());
+                bundle.putSerializable("event", events.get(position));
+                nav.navigate(R.id.nav_event, bundle);
+            }
+        });
     }
 
 

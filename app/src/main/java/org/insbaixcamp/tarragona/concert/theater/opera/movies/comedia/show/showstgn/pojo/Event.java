@@ -1,8 +1,13 @@
 package org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.showstgn.pojo;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Event {
+import java.io.Serializable;
+
+public class Event implements Serializable {
     @JsonProperty("adreça")
     public String getAdreça() {
         return this.adreça; }
@@ -81,4 +86,5 @@ public class Event {
     public void setPreu(String preu) {
         this.preu = preu; }
     String preu;
+
 }

@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.nav_event)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -62,26 +62,26 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 
-        fbc.getEventOpinions(3, new FirebaseConnection.FireStoreResults() {
-            @Override
-            public void onResultGet() {
-                Log.i("opiniions", fbc.getListOpinions().toString());
-            }
-        });
-
-        fbc.getUserReserves("VjRto7OUIZfyJwuId9KHBhAfOkQ2", new FirebaseConnection.FireStoreResults() {
-            @Override
-            public void onResultGet() {
-                Log.i("reserves", fbc.getListReserves().toString());
-            }
-        });
-
-        fbc.getUserData("JdeDyVWJ2uQEKAHBWxCKTMVXwJp2", new FirebaseConnection.FireStoreResults() {
-            @Override
-            public void onResultGet() {
-                Log.i("reserves", fbc.getDadesUsuari().toString());
-            }
-        });
+//        fbc.getEventOpinions(3, new FirebaseConnection.FireStoreResults() {
+//            @Override
+//            public void onResultGet() {
+//                Log.i("opiniions", fbc.getListOpinions().toString());
+//            }
+//        });
+//
+//        fbc.getUserReserves("VjRto7OUIZfyJwuId9KHBhAfOkQ2", new FirebaseConnection.FireStoreResults() {
+//            @Override
+//            public void onResultGet() {
+//                Log.i("reserves", fbc.getListReserves().toString());
+//            }
+//        });
+//
+//        fbc.getUserData("JdeDyVWJ2uQEKAHBWxCKTMVXwJp2", new FirebaseConnection.FireStoreResults() {
+//            @Override
+//            public void onResultGet() {
+//                Log.i("reserves", fbc.getDadesUsuari().toString());
+//            }
+//        });
 
 //        fbc.getReserves(new FirebaseConnection.FireStoreResults() {
 //            @Override

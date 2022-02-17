@@ -15,11 +15,16 @@
         android:id="@+id/nav_gallery"
         android:name="org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.showstgn.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_registre" />
 
     <fragment
         android:id="@+id/nav_slideshow"
         android:name="org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.showstgn.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_inici_sesio" />
+    <fragment
+        android:id="@+id/nav_event"
+        android:name="org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.showstgn.ui.event.EventFragment"
+        android:label="fragment_detalls_event"
+        tools:layout="@layout/fragment_detalls_event" />
 </navigation>
