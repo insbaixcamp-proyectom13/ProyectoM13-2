@@ -13,8 +13,12 @@
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/menu_gallery" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/nav_iniciar_sessio"
+            android:icon="@drawable/ic_menu_iniciar_sessio"
+            android:title="@string/menu_iniciar_sessio" />
+        <item
+            android:id="@+id/nav_carrito"
+            android:icon="@drawable/ic_menu_carrito"
+            android:title="@string/menu_carrito" />
     </group>
 </menu>
