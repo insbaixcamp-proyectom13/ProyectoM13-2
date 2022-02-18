@@ -3,9 +3,10 @@ package org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.show
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
-public class Opinio{
+public class Opinio {
     @JsonProperty("data")
     public String getData() {
         return this.data; }
@@ -53,6 +54,10 @@ public class Opinio{
                 ", puntuacio=" + puntuacio +
                 ", usuari='" + usuari + '\'' +
                 '}';
+    }
+
+    public Opinio() {
+
     }
 
     public Opinio(String opinio, int id, String usuari, String nomUsuari, int puntuacion) {

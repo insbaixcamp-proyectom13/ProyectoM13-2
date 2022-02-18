@@ -5,9 +5,11 @@ import androidx.annotation.NonNull;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -31,6 +33,10 @@ public class FirebaseConnection {
     ArrayList listReserves;
     Usuari dadesUsuari;
     FireStoreResults fireStoreResults;
+
+    public DatabaseReference getDatabaseReference() {
+        return this.myRef;
+    }
 
     public ArrayList getListEvents() {
         return listEvents;
@@ -119,6 +125,10 @@ public class FirebaseConnection {
             }
         });
 
+    }
+
+    public void postListener(ChildEventListener listener) {
+        myRef.addChildEventListener(listener);
     }
 
     public void getUserReserves (String UID, final FireStoreResults resul) {
