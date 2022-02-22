@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/baby_blue"
+    tools:context=".ui.dades.ModificarDadesFragment">
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="600dp"
+        android:layout_height="660dp"
+        android:background="@drawable/ic_wave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.927"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Registre"
+        android:layout_width="330dp"
+        android:layout_height="622dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="25dp"
+        android:orientation="vertical"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvCanviaNom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="32dp"
+                android:text="Nom"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/Blue"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/etCanviaNom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:ems="10"
+                android:hint="Pepito"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCanviaNom" />
+
+            <TextView
+                android:id="@+id/tvCanviaCognoms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:text="Cognoms"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/Blue"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etCanviaNom" />
+
+            <EditText
+                android:id="@+id/etCanviaCognoms"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:ems="10"
+                android:hint="Manolito"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCanviaCognoms" />
+
+            <TextView
+                android:id="@+id/tvCanviaTelefon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:text="Telèfon"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/Blue"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etCanviaCognoms" />
+
+            <EditText
+                android:id="@+id/etCanviaTelefon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:ems="10"
+                android:hint="653 53 56 69"
+                android:inputType="phone"
+                android:minHeight="48dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCanviaTelefon" />
+
+            <TextView
+                android:id="@+id/tvCanviaPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:text="Contrasenya"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/Blue"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etCanviaTelefon" />
+
+            <EditText
+                android:id="@+id/etCanviaPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:ems="10"
+                android:hint="*******"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCanviaPassword" />
+
+            <TextView
+                android:id="@+id/tvCanviaCorreu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Correu"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/Blue"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etCanviaPassword" />
+
+            <EditText
+                android:id="@+id/etCanviaCorreu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:ems="10"
+                android:hint="pepito@gmail.com"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCanviaCorreu" />
+
+            <TextView
+                android:id="@+id/tvCanviaAdreca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Correu"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/Blue"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etCanviaCorreu" />
+
+            <EditText
+                android:id="@+id/etCanviaAdreca"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:ems="10"
+                android:hint="pepito@gmail.com"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCanviaAdreca" />
+
+            <Button
+                android:id="@+id/bGuardarCanvis"
+                android:layout_width="184dp"
+                android:layout_height="71dp"
+                android:text="Guardar Canvis"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/Blue"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:backgroundTint="#00FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etCanviaAdreca"
+                app:rippleColor="@color/Blue"
+                app:strokeColor="@color/Blue"
+                app:strokeWidth="4dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

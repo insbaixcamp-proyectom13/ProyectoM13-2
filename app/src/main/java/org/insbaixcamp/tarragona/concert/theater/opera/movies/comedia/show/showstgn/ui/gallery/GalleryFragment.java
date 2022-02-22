@@ -54,11 +54,11 @@ public class GalleryFragment extends Fragment {
 
 
 
-        Button registry = binding.bRegistre;
+        Button registry = binding.bRegistrar;
         EditText etcorreu = binding.etEmail;
         EditText etcontrasenya = binding.etPassword;
         EditText etnom = binding.etNom;
-        EditText etcognom = binding.etCongnoms;
+        EditText etcognom = binding.etCognoms;
         EditText etdni = binding.etDni;
 
 

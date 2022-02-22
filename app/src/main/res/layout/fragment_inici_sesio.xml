@@ -39,7 +39,7 @@
             android:layout_height="match_parent">
 
             <com.google.android.gms.common.SignInButton
-                android:id="@+id/b_logingoogle"
+                android:id="@+id/bLogingoogle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="58dp"
@@ -56,7 +56,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <EditText
-                android:id="@+id/et_correu"
+                android:id="@+id/etCorreu"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="58dp"
@@ -69,10 +69,10 @@
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_correu2" />
+                app:layout_constraintTop_toBottomOf="@+id/tvCorreu" />
 
             <TextView
-                android:id="@+id/tv_correu2"
+                android:id="@+id/tvCorreu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="51dp"
@@ -80,11 +80,11 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="@color/Blue"
                 android:textSize="24sp"
-                app:layout_constraintStart_toStartOf="@+id/et_correu"
+                app:layout_constraintStart_toStartOf="@+id/etCorreu"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/b_login"
+                android:id="@+id/bLogin"
                 android:layout_width="0dp"
                 android:layout_height="55dp"
                 android:layout_marginStart="59dp"
@@ -95,7 +95,7 @@
                 android:text="Iniciar sessió "
                 android:textColor="@color/Midnight_blue"
                 app:backgroundTint="#00FFFFFF"
-                app:layout_constraintBottom_toTopOf="@+id/b_logingoogle"
+                app:layout_constraintBottom_toTopOf="@+id/bLogingoogle"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:rippleColor="@color/Blue"
@@ -103,7 +103,7 @@
                 app:strokeWidth="2dp" />
 
             <EditText
-                android:id="@+id/et_contrasenya"
+                android:id="@+id/etContrasenya"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="59dp"
@@ -116,10 +116,10 @@
                 android:inputType="textPassword"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_password2" />
+                app:layout_constraintTop_toBottomOf="@+id/tvPassword" />
 
             <TextView
-                android:id="@+id/tv_password2"
+                android:id="@+id/tvPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="107dp"
@@ -128,9 +128,9 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="@color/Blue"
                 android:textSize="24sp"
-                app:layout_constraintBottom_toTopOf="@+id/b_login"
-                app:layout_constraintStart_toStartOf="@+id/et_contrasenya"
-                app:layout_constraintTop_toTopOf="@+id/tv_correu2" />
+                app:layout_constraintBottom_toTopOf="@+id/bLogin"
+                app:layout_constraintStart_toStartOf="@+id/etContrasenya"
+                app:layout_constraintTop_toTopOf="@+id/tvCorreu" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
