@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/Projects/ProyectoM13-2/app/src/main/res/drawable/ic_baseline_send_24.xml" value="0.2885" />
+        <entry key="..\:/Android/Projects/ProyectoM13-2/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.2885" />
         <entry key="..\:/Android/Projects/ProyectoM13-2/app/src/main/res/drawable/ic_menu_compres.xml" value="0.2985" />
         <entry key="..\:/Android/Projects/ProyectoM13-2/app/src/main/res/drawable/ic_menu_iniciar_sessio.xml" value="0.2985" />
         <entry key="..\:/Android/Projects/ProyectoM13-2/app/src/main/res/layout/activity_main.xml" value="0.25" />
@@ -11,12 +13,14 @@
         <entry key="..\:/Android/Projects/ProyectoM13-2/app/src/main/res/layout/content_opinions.xml" value="0.358695652173913" />
         <entry key="..\:/Android/Projects/ProyectoM13-2/app/src/main/res/layout/fragment_carrito.xml" value="0.358695652173913" />
         <entry key="..\:/Android/Projects/ProyectoM13-2/app/src/main/res/layout/fragment_detalls_event.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android/Projects/ProyectoM13-2/app/src/main/res/layout/fragment_gallery.xml" value="0.18009118541033434" />
         <entry key="..\:/Android/Projects/ProyectoM13-2/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/Android/Projects/ProyectoM13-2/app/src/main/res/layout/fragment_inici.xml" value="0.36666666666666664" />
         <entry key="..\:/Android/Projects/ProyectoM13-2/app/src/main/res/layout/fragment_inici_sesio.xml" value="0.33" />
-        <entry key="..\:/Android/Projects/ProyectoM13-2/app/src/main/res/layout/fragment_modificar_dades.xml" value="0.25" />
+        <entry key="..\:/Android/Projects/ProyectoM13-2/app/src/main/res/layout/fragment_modificar_dades.xml" value="0.33" />
         <entry key="..\:/Android/Projects/ProyectoM13-2/app/src/main/res/layout/fragment_registre.xml" value="0.25" />
         <entry key="..\:/Android/Projects/ProyectoM13-2/app/src/main/res/layout/fragment_slideshow.xml" value="0.17831813576494426" />
+        <entry key="..\:/Android/Projects/ProyectoM13-2/app/src/main/res/layout/item_carrito_view.xml" value="0.18009118541033434" />
         <entry key="..\:/Android/Projects/ProyectoM13-2/app/src/main/res/layout/item_view.xml" value="0.25" />
         <entry key="..\:/Android/Projects/ProyectoM13-2/app/src/main/res/layout/nav_header_main.xml" value="0.17831813576494426" />
         <entry key="..\:/Android/Projects/ProyectoM13-2/app/src/main/res/layout/opinio_view.xml" value="0.358695652173913" />

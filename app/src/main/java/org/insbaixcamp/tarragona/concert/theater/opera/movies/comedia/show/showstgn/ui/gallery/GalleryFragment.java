@@ -37,7 +37,7 @@ public class GalleryFragment extends Fragment {
     private GalleryViewModel galleryViewModel;
     private FragmentRegistreBinding binding;
     private DatabaseReference mDatabase;
-    public final String url = "https://eventos-tarragona-app-default-rtdb.firebaseio.com/";
+    public final String url = "https://showstarragona-default-rtdb.firebaseio.com/";
     private FirebaseAuth mAuth;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -51,7 +51,6 @@ public class GalleryFragment extends Fragment {
 
         binding = FragmentRegistreBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-
 
 
         Button registry = binding.bRegistrar;
@@ -93,14 +92,14 @@ public class GalleryFragment extends Fragment {
 
                     if (machercorreu.matches() && matcherdni.matches()){
 
-                        dadesUsuari.put("Correu",correu);
-                        dadesUsuari.put("Contrasenya",contrasenya);
-                        dadesUsuari.put("Nom",nom);
-                        dadesUsuari.put("Cognom",cognom);
-                        dadesUsuari.put("DNI",dni);
-                        dadesUsuari.put("Telefon",telefon);
+                        dadesUsuari.put("correu",correu);
+                        dadesUsuari.put("contrasenya",contrasenya);
+                        dadesUsuari.put("nom",nom);
+                        dadesUsuari.put("cognom",cognom);
+                        dadesUsuari.put("dni",dni);
+                        dadesUsuari.put("telefon",telefon);
 
-                        mDatabase.child("Usuaris").push().setValue(dadesUsuari);
+                        mDatabase.child("usuaris").push().setValue(dadesUsuari);
 
                         mAuth.createUserWithEmailAndPassword(correu, contrasenya)
                                 .addOnCompleteListener((Activity) getContext(), new OnCompleteListener<AuthResult>() {
