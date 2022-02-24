@@ -1,12 +1,14 @@
 package org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.showstgn.data;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
@@ -27,7 +29,7 @@ public class FirebaseConnection {
     DatabaseReference myRef;
     Gson gson;
     String jsonValues;
-    ArrayList listEvents;
+    ArrayList<Event> listEvents;
     ArrayList listOpinions;
     ArrayList listOpinionsAll;
     ArrayList listReserves;
@@ -90,8 +92,9 @@ public class FirebaseConnection {
             }
         });
 
-
     }
+
+
 
     public void getUserData(String UID, final FireStoreResults resul) {
 
@@ -196,6 +199,51 @@ public class FirebaseConnection {
             }
         });
 
+    }
+
+    public void getReservedEvents(final FireStoreResults results) {
+
+        ArrayList<Event> reservedEvents = new ArrayList<>();
+        ArrayList<Reserva> filteresReserves = new ArrayList<>();
+
+        myRef.child("reserves").addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot snapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
+    public Event getEvent(int id) {
+
+        Event newEvent = null;
+        for (Event event : listEvents) {
+            if (event.getId() == id) {
+                newEvent = event;
+            }
+        }
+        return newEvent;
     }
 
     public interface FireStoreResults {

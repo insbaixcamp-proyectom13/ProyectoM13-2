@@ -95,4 +95,23 @@ public class Event implements Serializable {
         this.preu = preu; }
     String preu;
 
+    @Override
+    public String toString() {
+        return "Event{" +
+                "adreça='" + adreça + '\'' +
+                ", aforament=" + aforament +
+                ", ambit='" + ambit + '\'' +
+                ", data='" + data + '\'' +
+                ", descripcio='" + descripcio + '\'' +
+                ", espai='" + espai + '\'' +
+                ", hora='" + hora + '\'' +
+                ", id=" + id +
+                ", imatge='" + imatge + '\'' +
+                ", latitud=" + latitud +
+                ", longitud=" + longitud +
+                ", municipi='" + municipi + '\'' +
+                ", nom='" + nom + '\'' +
+                ", preu='" + preu + '\'' +
+                '}';
+    }
 }

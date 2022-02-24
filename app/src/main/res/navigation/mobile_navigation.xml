@@ -27,4 +27,9 @@
         android:name="org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.showstgn.ui.event.EventFragment"
         android:label="fragment_detalls_event"
         tools:layout="@layout/fragment_detalls_event" />
+    <fragment
+        android:id="@+id/nav_carrito"
+        android:name="org.insbaixcamp.tarragona.concert.theater.opera.movies.comedia.show.showstgn.ui.carrito.CarritoFragment"
+        android:label="fragment_carrito"
+        tools:layout="@layout/fragment_carrito" />
 </navigation>

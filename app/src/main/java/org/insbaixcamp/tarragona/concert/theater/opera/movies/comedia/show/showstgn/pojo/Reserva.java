@@ -21,6 +21,14 @@ public class Reserva{
     public void setEvent(int event) {
         this.event = event; }
     int event;
+    @JsonProperty("id")
+    public int getId() {
+        return this.id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    int id;
     @JsonProperty("pagades")
     public int getPagades() {
         return this.pagades; }
